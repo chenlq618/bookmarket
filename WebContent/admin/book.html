@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <link rel="shortcut icon"href="../images/book.ico">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/jquery.dataTables.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <title>title</title>
+</head>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <table id="example" class="display" cellspacing="0" width="100%" border="1">
+        <thead>
+            <tr>
+                <th>书本ID</th>
+                <th>书本名称</th>
+                <th>内容介绍</th>
+                <th>发布日期</th>
+            </tr>
+        </thead>
+    </table>
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+
+    $.ajax({
+        // "url": "users.json"
+        type: "get",
+        url: "http://139.129.129.15:80/bookmarket/getBooks.json",
+        success: function(data) {
+            console.log(data);
+
+            $('#example').dataTable({
+                "data": data,
+                "aLengthMenu": [2, 5, 10, -1],
+                "language": {
+                    "lengthMenu": "每页_MENU_ 条记录",
+                    "zeroRecords": "没有找到记录",
+                    "info": "第 _PAGE_ 页 ( 总共 _PAGES_ 页 )",
+                    "infoEmpty": "无记录",
+                    "infoFiltered": "(从 _MAX_ 条记录过滤)",
+                    "paginate": {
+                        "previous": "上一页",
+                        "next": "下一页"
+                    }
+                },
+                "columns": [{
+                    "data": "bookId"
+                }, {
+                    "data": "bookName"
+                }, {
+                    "data": "bookIntro"
+                }, {
+                    "data": "releaseDate"
+                }]
+
+            });
+        },
+        error: function() {
+            alert('fail');
+        }
+    });
+
+
+
+});
+</script>
+
+</html>

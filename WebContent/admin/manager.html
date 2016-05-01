@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <link rel="shortcut icon"href="../images/book.ico">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/demo.css">
+    <link rel="stylesheet" type="text/css" href="../css/metisMenu.min.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/metisMenu.min.js"></script>
+     <script type="text/javascript" src="../js/jquery.cookie.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <title>系统管理</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2" style="background: #2acddc;" id="menu" align="center">
+                <a href="#" id="userManager"><h3><font color="white">用户管理</font></h3></a>
+                <a href="#" id="orderManager"><h3><font color="white">订单管理</font></h3></a>
+                <a href="#" id="bookManager"><h3><font color="white">图书管理</font></h3></a>
+                <a href="#" id="releaseBook"><h3><font color="white">发布图书</font></h3></a>
+            </div>
+            <div class="col-md-10" align="center">
+                <div id="mainManager" style="width: 80%" ></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+    if($.cookie('islogin')!= 0){
+        window.location = "login.html";
+    }
+
+     $.ajax({
+
+        type: "post",
+        url: "http://139.129.129.15:80/bookmarket/filesubmit.json",
+        success: function(data) {
+            if (data.code == 0) {
+                alert("提交成功")
+                $("#mainManager").load("releaseBook.html");
+            } 
+             
+
+        }
+    });
+
+  
+    
+});
+
+$('#menu').css({
+    'height': $(window).height()
+});
+$('#mainManager').css({
+    'height': $(window).height()
+});
+
+$("#userManager").click(function(){
+      $("#mainManager").load("users.html");
+});
+$("#orderManager").click(function(){
+      $("#mainManager").load("buys.html");
+});
+$("#bookManager").click(function(){
+      $("#mainManager").load("book.html");
+});
+$("#releaseBook").click(function(){
+      $("#mainManager").load("releaseBook.html");
+});
+</script>
+
+</html>

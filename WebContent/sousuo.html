@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <title>搜索</title>
+</head>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <div align="center">
+        <form>
+            <input type="text" name="bookName" id="bookName">
+            <button type="button" class="btn btn-primary" id="sousuobt">搜索</button>
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div align="center">
+        <div style="width: 800px;" id="ssResult">
+            <table class="table" id="sousuotd">
+                <!--
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <a href=""><img src="images/book1.jpg"></a>
+                    </td>
+                    <td>麦肯锡21年，飞船掠过太阳，这是人类第一次到达系外恒星系统！飞船在黄白色的双星构成的火焰峡谷中缓缓穿过，宇宙在峡谷两头蜷缩成狭小的一线天，壮观的场景令每个人都为之窒息！ 　　我，一名宇航员，带着地球人的希望与寄托，前往伊甸园星球。 　　在传说中，它环绕一颗主序星运行，和地球同样大小，天然适合人类居住，从未染过黑烟的天空下荡漾着蓝色的海洋，没有战争与杀戮。 　　在星际航行的过程中，我历经困难，生离死别，穿越多个星系，终于抵达目的地，却发现，贪婪与自私，是整个宇宙的本能，伊甸园星球也未能幸免。由于我的贸然造访，引发一场毁灭性的灾难向人类凶猛扑来……
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>
+                        <a href=""><img src="images/book1.jpg"></a>
+                    </td>
+                    <td>麦肯锡21年，飞船掠过太阳，这是人类第一次到达系外恒星系统！飞船在黄白色的双星构成的火焰峡谷中缓缓穿过，宇宙在峡谷两头蜷缩成狭小的一线天，壮观的场景令每个人都为之窒息！ 　　我，一名宇航员，带着地球人的希望与寄托，前往伊甸园星球。 　　在传说中，它环绕一颗主序星运行，和地球同样大小，天然适合人类居住，从未染过黑烟的天空下荡漾着蓝色的海洋，没有战争与杀戮。 　　在星际航行的过程中，我历经困难，生离死别，穿越多个星系，终于抵达目的地，却发现，贪婪与自私，是整个宇宙的本能，伊甸园星球也未能幸免。由于我的贸然造访，引发一场毁灭性的灾难向人类凶猛扑来……
+                    </td>
+                </tr>
+                -->
+            </table>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+<script type="text/javascript">
+$("#sousuobt").click(function() {
+    $.ajax({
+        type: "post",
+        data: "bookName=" + $("#bookName").val(),
+        url: "http://139.129.129.15:80/bookmarket/sousuo.json",
+        success: function(data) {
+            console.log(data);
+            
+            var trHTML="<tr align='center'><td width='50px'>序号</td><td>书</td><td>介绍</td></tr>";
+            for (i = 0; i < data.length; i++) {
+                trHTML =trHTML+ "<tr align='center'><td>" + i + "</td><td> <a href='" + data[i].bookURL + "'>" + "<img src='images/bookImages/" + data[i].bookImg + "'></a></td><td>" + data[i].bookIntro + "</td></tr>"
+                    //$("#sousuotd").append(trHTML);
+            }
+            $("#sousuotd").html(trHTML);
+        },
+        error: function() {
+            alert('连接错误');
+        }
+    });
+
+
+});
+</script>
+
+</html>

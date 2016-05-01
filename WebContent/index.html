@@ -1,10 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="shortcut icon"href="images/book.ico">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <title>首页</title>
 </head>
+<style type="text/css">
+nav.navbar li a {
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+nav.navbar li a:hover,
+nav.navbar li a:active {
+    background-color: #81e4ed;
+}
+</style>
+
 <body>
-test
+    <div style="height: 87px;background: #e9e9f1;">
+        <nav class="navbar" role="navigation">
+            <div class="navbar-header">
+                <img src="images/navigation.png">
+            </div>
+            <div>
+                <ul class="nav navbar-nav" style="margin-top: 10px;">
+                    <li class="active"><a class="index">首页</a></li>
+                    <li>
+                        <a class="fenlei">分类</a>
+                    </li>
+                    <li>
+                        <a class="rank">排行榜</a>
+                    </li>
+                    <li>
+                        <a class="sousuo">搜索</a>
+                    </li>
+                    <li>
+                        <a class="self">我的</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div id="mybody"></div>
+    <div id="myfooter"></div>
 </body>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#mybody").load("index1.html");
+    $("#myfooter").load("footer.html");
+});
+$(".index").click(function() {
+    $("title").text("首页");
+    $("#mybody").html("");
+    $("#mybody").load("index1.html");
+});
+$(".fenlei").click(function() {
+    $("title").text("分类");
+    $("#mybody").html("");
+    $("#mybody").load("fenlei.html");
+});
+$(".rank").click(function() {
+    $("title").text("排行榜");
+    $("#mybody").html("");
+    $("#mybody").load("rank.html");
+});
+$(".sousuo").click(function() {
+    $("title").text("搜索");
+    $("#mybody").html("");
+    $("#mybody").load("sousuo.html");
+});
+$(".self").click(function() {
+    $("title").text("我的");
+    $("#mybody").html("");
+    $("#mybody").load("self.html");
+});
+</script>
+
 </html>

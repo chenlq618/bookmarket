@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <title>首页</title>
+</head>
+
+<body>
+    <div id="indexcarousel" class="owl-carousel" style="background: #81e4ed;height:400px; padding-top: 20px;" align="center">
+        <div><img src="images/index1.png" ></div>
+        <div><img src="images/index2.png" ></div>
+        <div><img src="images/index3.png" ></div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <h4 align="center">今日最新</h4>
+    <div class="container" style="width: 800px">
+        <div class="row" style="margin-bottom: 30px">
+            <div class="col-md-3"><a href="1.html"><img src="images/bookImages/1.jpg" ></a></div>
+            <div class="col-md-3"><a href="2.html"><img src="images/bookImages/2.jpg" ></a></div>
+            <div class="col-md-3"><a href="3.html"><img src="images/bookImages/3.jpg" ></a></div>
+            <div class="col-md-3"><a href="4.html"><img src="images/bookImages/4.jpg" ></a></div>
+        </div>
+    </div>
+
+<br>
+<br>
+<br>
+ <h4 align="center">图书推荐</h4>
+    <div class="container" style="width: 800px">
+         <div class="row" style="margin-bottom: 50px">
+            <div class="col-md-3"><a href="5.html"><img src="images/bookImages/5.jpg" ></a></div>
+            <div class="col-md-3"><a href="3.html"><img src="images/bookImages/3.jpg" ></a></div>
+            <div class="col-md-3"><a href="4.html"><img src="images/bookImages/4.jpg" ></a></div>
+            <div class="col-md-3"><a href="1.html"><img src="images/bookImages/1.jpg" ></a></div>
+        </div>
+    </div>
+
+    
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#indexcarousel").owlCarousel({
+        autoPlay: 5000,
+        items:1,
+    });
+
+});
+</script>
+
+</html>

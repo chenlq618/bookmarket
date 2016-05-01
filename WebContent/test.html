@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <title>title</title>
+</head>
+
+<body>  
+<input type="hidden" id="bookId" value="test2" />
+ <button type="button" class="btn btn-default" id="readBook">阅读</button>
+ <input  type="text" size="3" />
+</body>  
+<script type="text/javascript">  
+$("#readBook").click(function() {
+  location.href="http://localhost:8080/bookmarket/"+$("#bookId").val()+".html";
+});
+</script>  
+</html>  

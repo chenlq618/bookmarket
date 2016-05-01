@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <link rel="shortcut icon"href="images/book.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <title>注册</title>
+</head>
+<style type="text/css">
+nav.navbar li a {
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+nav.navbar li a:hover,
+nav.navbar li a:active {
+    background-color: #81e4ed;
+}
+</style>
+
+<body>
+    <div style="height: 87px;background: #e9e9f1;">
+        <nav class="navbar" role="navigation">
+            <div class="navbar-header">
+                <img src="images/navigation.png">
+            </div>
+            <div>
+                <ul class="nav navbar-nav" style="margin-top: 10px;">
+                    <li class="active"><a class="index">首页</a></li>
+                    <li>
+                        <a class="fenlei">分类</a>
+                    </li>
+                    <li>
+                        <a class="rank">排行榜</a>
+                    </li>
+                    <li>
+                        <a class="sousuo">搜索</a>
+                    </li>
+                    <li>
+                        <a class="self">我的</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div id="mybody">
+        <div align="center">
+            <div style="width: 450px;">
+                <form class="form-horizontal" method="post" enctype="multipart/form-data" action="http://139.129.129.15:80/bookmarket/regist.json">
+                <h5><font color="red">注册需要100元，将钱转到支付宝abc，才具后会员权限</font></h5>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">用户名</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="用户名不得超过20位">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-sm-2 control-label">密码</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" name="password" id="password" placeholder="密码不得超过20位">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="sex" class="col-sm-2 control-label">性别</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="sex" id="sex" placeholder="输入0或者1，0表示男，1表示女">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="col-sm-2 control-label">电话</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="phone" id="phone" placeholder="11位电话号码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address" class="col-sm-2 control-label">地址</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="address" id="address" placeholder="送货地点">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="file" class="col-sm-2 control-label">头像</label>
+                        <div class="col-sm-10">
+                            <input type="file" name="file" id="file">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default">注册</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div id="myfooter">
+    </div>
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#myfooter").load("footer.html");
+});
+
+$(".index").click(function() {
+    $("title").text("首页");
+    $("#mybody").html("");
+    $("#mybody").load("index1.html");
+});
+$(".fenlei").click(function() {
+    $("title").text("分类");
+    $("#mybody").html("");
+    $("#mybody").load("fenlei.html");
+});
+$(".rank").click(function() {
+    $("title").text("排行榜");
+    $("#mybody").html("");
+    $("#mybody").load("rank.html");
+});
+$(".sousuo").click(function() {
+    $("title").text("搜索");
+    $("#mybody").html("");
+    $("#mybody").load("sousuo.html");
+});
+$(".self").click(function() {
+    $("title").text("我的");
+    $("#mybody").html("");
+    $("#mybody").load("self.html");
+});
+</script>
+
+</html>

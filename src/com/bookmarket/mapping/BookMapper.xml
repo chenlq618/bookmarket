@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bookmarket.dao.BookDao">
+<!-- 插入用户信息 -->
+	<insert id="addUser" parameterType="com.bookmarket.bean.UserInfo">
+		insert into
+		userInfo(name,userIcon,password,sex,phone,address,userType)
+		values(#{name,jdbcType=VARCHAR},
+		#{userIcon,jdbcType=VARCHAR},
+		#{password,jdbcType=VARCHAR},
+		#{sex},
+		#{phone,jdbcType=VARCHAR},
+		#{address,jdbcType=VARCHAR},
+		1
+		)
+	</insert>
+	
+	<select id="getUserByName" parameterType="String"
+		resultType="com.bookmarket.bean.UserInfo">
+		SELECT * FROM userInfo WHERE
+		name=#{name,jdbcType=VARCHAR}
+	</select>
+	
+	<select id="getUsers" parameterType="String"
+		resultType="com.bookmarket.bean.UserInfo">
+		SELECT * FROM userInfo
+	</select>
+	
+	<update id="updateUserInfo" parameterType="com.bookmarket.bean.UserInfo">
+		update userInfo
+		set
+		<if test="userIcon != null">
+			userIcon = #{userIcon,jdbcType=VARCHAR},
+		</if>
+		<if test="password != null">
+			password = #{password,jdbcType=VARCHAR},
+		</if>
+		<if test="sex != null">
+			sex = #{sex},
+		</if>
+		<if test="phone != null">
+			phone = #{phone,jdbcType=VARCHAR},
+		</if>
+		<if test="address != null">
+			address = #{address,jdbcType=VARCHAR},
+		</if>
+		userType=0
+		where name=#{name,jdbcType=VARCHAR}
+	</update>
+	
+
+	
+	<insert id="addBook" parameterType="com.bookmarket.bean.BookInfo">
+		insert into
+		bookInfo(bookId,bookName,pageSize,bookIntro,author,bookImg,bookURL,prize,bookType,releaseDate)
+		values(
+		#{bookId},
+		#{bookName,jdbcType=VARCHAR},
+		#{pageSize},
+		#{bookIntro,jdbcType=VARCHAR},
+		#{author,jdbcType=VARCHAR},
+		#{bookImg,jdbcType=VARCHAR},
+		#{bookURL,jdbcType=VARCHAR},
+		#{prize},
+		#{bookType,jdbcType=VARCHAR},
+		now()
+		)
+	</insert>
+	
+	
+	<update id="updateBookInfo" parameterType="com.bookmarket.bean.BookInfo">
+		update userInfo
+		set
+		<if test="money != null">
+			money = #{money}
+		</if>
+		<if test="money != null and bookClick != null">
+		,
+		</if>
+		<if test="bookClick != null">
+			bookClick = #{bookClick}
+		</if>
+		where bookName=#{bookName,jdbcType=VARCHAR}
+	</update>
+	
+	<select id="getBooks" 
+		resultType="com.bookmarket.bean.BookInfo">
+		SELECT *
+		 FROM bookInfo 
+	</select>
+	
+	
+	<select id="getBooksByType" 
+		parameterType="Integer"
+		resultType="com.bookmarket.bean.BookInfo">
+		SELECT *
+		 FROM bookInfo 
+		 where bookType=#{bookType}
+	</select>
+	
+	
+	<select id="getBuys" 
+		resultType="com.bookmarket.bean.Buy">
+		SELECT b.*,u.name,u.address,u.phone,t.bookName
+		 FROM buys b,userInfo u,bookInfo t
+		where type=1 and b.name=u.name and b.bookId=t.bookId
+	</select>
+	
+	<select id="getBuyByUserName" parameterType="String"
+		resultType="com.bookmarket.bean.Buy">
+		SELECT distinct b.userId,b.name,b.bookId,b.type,u.name,u.address,u.phone,t.bookName,t.bookImg,t.bookURL
+		 FROM buys b,userInfo u,bookInfo t
+		where  type=1 and b.name=u.name and b.bookId=t.bookId and u.name=#{name}
+	</select>
+	
+	<select id="getFavoriteByUserName" parameterType="String"
+		resultType="com.bookmarket.bean.Buy">
+		SELECT distinct b.userId,b.name,b.bookId,b.type,u.name,u.address,u.phone,t.bookName,t.bookImg,t.bookURL
+		 FROM buys b,userInfo u,bookInfo t
+		where type=0 and b.name=u.name and b.bookId=t.bookId and u.name=#{name}
+	</select>
+	
+	<select id="sousuo" 
+	parameterType="String"
+		resultType="com.bookmarket.bean.BookInfo">
+		SELECT *
+		 FROM bookInfo 
+		where bookName like CONCAT('%',#{bookName},'%' )
+		 or bookIntro like  CONCAT('%',#{bookName},'%' )
+	</select>
+	
+	<insert id="addBuy" parameterType="com.bookmarket.bean.Buy">
+		insert into
+		buys(name,bookId,type,operateDate)
+		values(
+		#{name,jdbcType=VARCHAR},
+		#{bookId},
+		#{type},
+		now()
+		)
+	</insert>	
+	
+</mapper>

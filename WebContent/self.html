@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <link rel="shortcut icon"href="images/book.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <title>titl</title>
+</head>
+
+<body>
+    <div id="loginModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content" align="center">
+                <form class="form-horizontal">
+                    <br>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="name" id="name" placeholder="用户名">
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="密码">
+                    </div>
+                    <br>
+                    <br>
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <button id="login2" type="button" class="btn btn-default">登陆</button>
+                            <button id="register" type="button" class="btn btn-default">注册</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div align="center">
+        <div style="width: 800px;">
+            <img src="images/userIcon/defaultUserIcon.jpg" id="userIcon" style="width: 165;height: 220;">
+            <h3 id="uname">访客</h3>
+            <div id="exitbt"></div>
+            <h1 class="page-header"></h1>
+            <h3 id="userTitle1">购买最多书籍</h3>
+            <div class="container" style="width: 800px" id="userBuys">
+                <div class="row" style="margin-bottom: 30px">
+                    <div class="col-md-3">
+                        <a href="1.html"><img src="images/bookImages/1.jpg"></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="2.html"><img src="images/bookImages/2.jpg"></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="3.html"><img src="images/bookImages/3.jpg"></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="4.html"><img src="images/bookImages/4.jpg"></a>
+                    </div>
+                </div>
+            </div>
+            <h1 class="page-header"></h1>
+            <h3 id="userTitle2">收藏最多书籍</h3>
+            <div class="container" style="width: 800px" id="userFavorite">
+                <div class="row" style="margin-bottom: 30px">
+                    <div class="col-md-3">
+                        <a href="1.html"><img src="images/bookImages/1.jpg"></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="2.html"><img src="images/bookImages/2.jpg"></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="3.html"><img src="images/bookImages/3.jpg"></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="4.html"><img src="images/bookImages/4.jpg"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+        if ($.cookie("islogin") == 1 || $.cookie("islogin") == 0) {
+            $("#uname").text($.cookie("name"));
+            $("#exitbt").html("<button type='button' class='btn btn-primary' id='exitbbt'>退出</button>");
+            $("#userTitle1").text("我的购买");
+            $("#userTitle2").text("我的收藏");
+            $("#userIcon").attr('src', "images/userIcon/" + $.cookie("userIcon"));
+            $("#loginModal").modal("hide");
+
+            var user = {
+                name: $.cookie("name")
+            };
+
+            $.ajax({
+                type: "post",
+                data: user,
+                url: "http://139.129.129.15:80/bookmarket/loginInfo.json",
+                success: function(data) {
+
+                    //购买内容
+                    buyobject = data.buys;
+                    buyhtml = ""
+
+                    for (i = 0; i < buyobject.length; i++) {
+                        if (i % 4 == 0) {
+                            buyhtml = buyhtml + "<div class='row' style='margin-bottom: 30px'>";
+                        }
+
+                        buyhtml = buyhtml + "<div class='col-md-3'><a href='" + buyobject[i].bookURL +
+                            "'><img src='images/bookImages/" + buyobject[i].bookImg + "'></a></div>";
+                        if (i % 4 == 3) {
+                            buyhtml = buyhtml + "</div>";
+                        }
+                    }
+                    if (i % 4 != 3) {
+                        buyhtml = buyhtml + "</div>";
+                    } 
+                    $("#userBuys").html(buyhtml);
+                    //收藏内容
+                    favoriteobject = data.favorite;
+                    favoritehtml = ""
+
+                    for (i = 0; i < favoriteobject.length; i++) {
+                        if (i % 4 == 0) {
+                            favoritehtml = favoritehtml + "<div class='row' style='margin-bottom: 30px'>";
+                        }
+
+                        favoritehtml = favoritehtml + "<div class='col-md-3'><a href='" + favoriteobject[i].bookURL +
+                            "'><img src='images/bookImages/" + favoriteobject[i].bookImg + "'></a></div>";
+                        if (i % 4 == 3) {
+                            favoritehtml = favoritehtml + "</div>";
+                        }
+                    }
+                    if (i % 4 != 3) {
+                        favoritehtml = favoritehtml + "</div>";
+                    } 
+                    $("#userFavorite").html(favoritehtml);
+
+                },
+                error: function() {
+                    alert('网络连接异常');
+                }
+            });
+        } else {
+            $("#loginModal").modal("show");
+        }
+    }
+    //$("#loginModal").modal("show");
+);
+
+$("#exitbt").click(function() {
+    var r = confirm("是否退出");
+    if (r == true) {
+        $.cookie("islogin", 3);
+        location.href = "index.html";
+    }
+});
+
+$("#login2").click(function() {
+    var user = {
+        name: $("#name").val(),
+        password: $("#password").val()
+    };
+    $.ajax({
+        type: "post",
+        data: user,
+        url: "http://139.129.129.15:80/bookmarket/login.json",
+        success: function(data) {
+            if (data.code == 0 || data.code == 1) {
+                $.cookie("islogin", data.code);
+                $.cookie("name", $("#name").val());
+                $.cookie("userIcon", data.userIcon);
+                $("#userIcon").attr('src', "images/userIcon/" + data.userIcon);
+                $("#uname").text($("#name").val());
+                $("#exitbt").html("<button type='button' class='btn btn-primary' id='exitbbt'>退出</button>");
+                $("#userTitle1").text("我的购买");
+                $("#userTitle2").text("我的收藏");
+                $("#loginModal").modal("hide");
+
+                //购买内容
+                    buyobject = data.buys;
+                    buyhtml = ""
+
+                    for (i = 0; i < buyobject.length; i++) {
+                        if (i % 4 == 0) {
+                            buyhtml = buyhtml + "<div class='row' style='margin-bottom: 30px'>";
+                        }
+
+                        buyhtml = buyhtml + "<div class='col-md-3'><a href='" + buyobject[i].bookURL +
+                            "'><img src='images/bookImages/" + buyobject[i].bookImg + "'></a></div>";
+                        if (i % 4 == 3) {
+                            buyhtml = buyhtml + "</div>";
+                        }
+                    }
+                    if (i % 4 != 3) {
+                        buyhtml = buyhtml + "</div>";
+                    } 
+                    $("#userBuys").html(buyhtml);
+                    //收藏内容
+                    favoriteobject = data.favorite;
+                    favoritehtml = ""
+
+                    for (i = 0; i < favoriteobject.length; i++) {
+                        if (i % 4 == 0) {
+                            favoritehtml = favoritehtml + "<div class='row' style='margin-bottom: 30px'>";
+                        }
+
+                        favoritehtml = favoritehtml + "<div class='col-md-3'><a href='" + favoriteobject[i].bookURL +
+                            "'><img src='images/bookImages/" + favoriteobject[i].bookImg + "'></a></div>";
+                        if (i % 4 == 3) {
+                            favoritehtml = favoritehtml + "</div>";
+                        }
+                    }
+                    if (i % 4 != 3) {
+                        favoritehtml = favoritehtml + "</div>";
+                    } 
+                    $("#userFavorite").html(favoritehtml);
+
+
+            } else {
+                alert('密码或者用户错误');
+            }
+
+        },
+        error: function() {
+            alert('密码或者用户错误');
+        }
+    });
+});
+
+$("#register").click(function() {
+    $("#loginModal").modal("hide");
+    location.href = "register.html";
+});
+</script>
+
+</html>

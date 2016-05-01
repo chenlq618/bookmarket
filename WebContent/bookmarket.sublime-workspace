@@ -1,0 +1,670 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bsbu",
+				"bs3-button:primary	bs3-button-primary"
+			],
+			[
+				"bu",
+				"bs3-button:primary	bs3-button-primary"
+			],
+			[
+				"user",
+				"userIcon"
+			],
+			[
+				"log",
+				"login2"
+			],
+			[
+				"al",
+				"alert"
+			],
+			[
+				"rel",
+				"releaseBook"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"ac",
+				"active"
+			],
+			[
+				"bsn",
+				"bs3-navbar:inverse	bs3-navbar-inverse"
+			],
+			[
+				"fon",
+				"font-size: 〔property〕"
+			],
+			[
+				"st",
+				"style	Tag"
+			],
+			[
+				"pa",
+				"padding-right"
+			],
+			[
+				"j",
+				"jumbotron"
+			],
+			[
+				"pad",
+				"padding-right"
+			],
+			[
+				"pro",
+				"project"
+			],
+			[
+				"cont",
+				"contact"
+			],
+			[
+				"p",
+				"position"
+			],
+			[
+				"联系",
+				"联系我们"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
+				"s",
+				"size	Attr"
+			],
+			[
+				"fun",
+				"function〔keyword〕"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"a",
+				"align	Attr"
+			],
+			[
+				"bs",
+				"bs3-container	bs3-container"
+			],
+			[
+				"bs3-c",
+				"bs3-col:5	bs3-col-5"
+			],
+			[
+				"c",
+				"color"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"sc",
+				"script"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"li",
+				"link	Tag"
+			],
+			[
+				"co",
+				"col"
+			],
+			[
+				"w",
+				"white"
+			],
+			[
+				"padding",
+				"padding-right"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"align",
+				"align-items"
+			],
+			[
+				"com",
+				"company1"
+			],
+			[
+				"compa",
+				"company2"
+			],
+			[
+				"bs3-co",
+				"bs3-container	bs3-container"
+			],
+			[
+				"inl",
+				"inline-block〔value〕"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"to",
+				"top"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"cl",
+				"color	Attr"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"di",
+				"div	Tag"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"ov",
+				"overflow"
+			],
+			[
+				"max",
+				"max-width"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "admin/releaseBook.html",
+			"settings":
+			{
+				"buffer_size": 3545,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 288.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: bhtml"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 528.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'PackageControl.sublime-package'; ipp = sublime.installed_packages_path();urllib.request.install_opener( urllib.request.build_opener(urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf),'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace('','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/workspace/bookmarket/WebContent/admin"
+	],
+	"file_history":
+	[
+		"/C/Users/Administrator/Desktop/修罗武神/books/1.html",
+		"/C/Users/Administrator/Desktop/修罗武神/books/2.html",
+		"/E/workspace/bookmarket/WebContent/admin/releaseBook.html",
+		"/C/Users/Administrator/Desktop/修罗武神/books/3.html",
+		"/E/workspace/bookmarket/WebContent/book.html",
+		"/E/workspace/bookmarket/WebContent/books/2/3.html",
+		"/E/workspace/bookmarket/WebContent/books/2/2.html",
+		"/E/workspace/bookmarket/WebContent/books/5/1.html",
+		"/E/workspace/bookmarket/WebContent/books/5/2.html",
+		"/E/workspace/bookmarket/WebContent/books/2/1.html",
+		"/E/workspace/bookmarket/WebContent/books/5/3.html",
+		"/E/workspace/bookmarket/WebContent/books/3/2.html",
+		"/E/workspace/bookmarket/WebContent/books/3/1.html",
+		"/E/workspace/bookmarket/WebContent/books/4/2.html",
+		"/E/workspace/bookmarket/WebContent/books/4/3.html",
+		"/E/workspace/bookmarket/WebContent/books/4/1.html",
+		"/E/workspace/bookmarket/WebContent/test.html",
+		"/E/workspace/bookmarket/WebContent/register.html",
+		"/E/workspace/bookmarket/WebContent/books/1/5.html",
+		"/E/workspace/bookmarket/WebContent/books/1/4.html",
+		"/E/workspace/bookmarket/WebContent/books/1/3.html",
+		"/E/workspace/bookmarket/WebContent/books/1/2.html",
+		"/E/workspace/bookmarket/WebContent/books/1/1.html",
+		"/E/workspace/bookmarket/WebContent/abc.txt",
+		"/E/workspace/bookmarket/WebContent/index.html",
+		"/E/workspace/bookmarket/WebContent/abc.html",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/C/Users/Administrator/Desktop/site/renmeng1/1/zh/product.html",
+		"/C/Users/Administrator/Desktop/site/renmeng1/1/zh/index.html",
+		"/E/workspace/bookmarket/WebContent/1.html",
+		"/E/workspace/bookmarket/WebContent/self.html",
+		"/E/workspace/bookmarket/WebContent/books/1.html",
+		"/F/myblog/1/blog/sublime使用.md",
+		"/E/RenMeng/1/zh/index.html",
+		"/E/workspace/bookmarket/WebContent/sousuo.html",
+		"/E/workspace/bookmarket/WebContent/admin/users.html",
+		"/E/workspace/bookmarket/WebContent/admin/buys.html",
+		"/E/workspace/bookmarket/WebContent/admin/book.html",
+		"/E/workspace/bookmarket/WebContent/admin/login.html",
+		"/E/workspace/bookmarket/WebContent/admin/manager.html",
+		"/E/workspace/bookmarket/WebContent/admin/users.json",
+		"/C/Users/Administrator/Desktop/bookmarket/1/test.html",
+		"/C/Users/Administrator/Desktop/bookmarket/1/self.html",
+		"/C/Users/Administrator/Desktop/bookmarket/1/admin/users.html",
+		"/C/Users/Administrator/Desktop/bookmarket/1/admin/user2.json",
+		"/C/Users/Administrator/Desktop/bookmarket/1/admin/users.json",
+		"/C/Users/Administrator/Desktop/bookmarket/1/abc.json",
+		"/C/Users/Administrator/Desktop/bookmarket/1/index.html",
+		"/E/RenMeng/1/zh/video.html",
+		"/E/RenMeng/1/zh/contact.html",
+		"/E/RenMeng/1/zh/product.html",
+		"/E/RenMeng/1/zh/project.html",
+		"/E/RenMeng/1/zh/renmeng.html",
+		"/C/Users/Administrator/Desktop/bookmarket/1/admin/manager.html",
+		"/C/Users/Administrator/Desktop/webTest/metrismenu.html",
+		"/C/Users/Administrator/Desktop/webTest/metrismenu3.html",
+		"/F/myblog/1/blog/do.md",
+		"/F/myblog/1/blog/学习方法.md",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Administrator/Desktop/bookmarket/1/index1.html",
+		"/E/RenMeng/1/en/index.html",
+		"/E/RenMeng/1/test2.html",
+		"/E/RenMeng/1/zh/index2.html",
+		"/E/RenMeng/1/zh/renmeng2.html",
+		"/E/RenMeng/1/zh/renmeng3.html",
+		"/E/RenMeng/1/zh/renmeng2",
+		"/E/RenMeng/1/videotest.html",
+		"/E/RenMeng/1/swiperTest.html",
+		"/F/myblog/1/blog/前端常用库.md",
+		"/E/renmeng/1/swiperTest.html",
+		"/E/renmeng/videotest.html",
+		"/E/RenMeng/1/zh/test.html",
+		"/E/renmeng/1/test2.html",
+		"/C/Users/Administrator/Desktop/bookmarket/1/footer.html",
+		"/E/RenMeng/carsousel/scrollify.html",
+		"/E/renmeng/test.html",
+		"/C/Users/Administrator/Desktop/bookmarket/1/admin/book.html",
+		"/C/Users/Administrator/Desktop/bookmarket/1/admin/buys.html",
+		"/C/Users/Administrator/Desktop/bookmarket/1/admin/login.html",
+		"/C/Users/Administrator/Desktop/bookmarket/1/admin/buys.json",
+		"/C/Users/Administrator/Desktop/webTest/datatable/test.html",
+		"/C/Users/Administrator/bower_components/metisMenu/README.md",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+		"/C/Users/Administrator/Desktop/bookmarket/1/register.html",
+		"/C/Users/Administrator/Desktop/bookmarket/1/sousuo.html",
+		"/C/Users/Administrator/Desktop/bookmarket/1/rank.html",
+		"/C/Users/Administrator/Desktop/bookmarket/1/fenlei.html",
+		"/C/Users/Administrator/Desktop/bookmarket/1/navigation.html",
+		"/C/Users/Administrator/Desktop/bookmarket/index.html",
+		"/C/Users/Administrator/Desktop/bookmarket/footer.html",
+		"/C/Users/Administrator/Desktop/bookmarket/navigation.html",
+		"/E/RenMeng/test/abcd.html",
+		"/E/renmeng/abc.html",
+		"/E/renmeng/test2/ajaxTest.html",
+		"/F/myblog/1/blog/test.md",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/Git/Git.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/TortoiseSVN.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/TortoiseSVN/TortoiseSVN.sublime-settings",
+		"/F/myblog/1/blog/welcome.md",
+		"/E/RenMeng/carsousel/easingTest.html",
+		"/E/renmeng/scrollify.html",
+		"/E/RenMeng/carsousel/caroufredsel.html",
+		"/E/RenMeng/caroufredsel.html",
+		"/E/renmeng/caroufredsel.html",
+		"/E/renmeng/carsousel/easingTest.html",
+		"/E/RenMeng/carsousel/test1.html",
+		"/E/renmeng/test2/zindexTest.html",
+		"/E/RenMeng/carsousel/multiscrollTest.html",
+		"/E/renmeng/carsousel/test1.html",
+		"/E/renmeng/multiscrollTest.html",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/bhtml.sublime-snippet",
+		"/E/RenMeng/test/htest.html",
+		"/E/renmeng/htest.html",
+		"/E/RenMeng/1/index.php",
+		"/E/RenMeng/1/en/renmeng.html",
+		"/E/RenMeng/1/en/project.html",
+		"/E/RenMeng/1/en/product.html",
+		"/E/RenMeng/1/en/contact.html",
+		"/E/renmeng/test/jqueryviewer.html",
+		"/E/RenMeng/1/project.html",
+		"/E/RenMeng/test/smallImag.html",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/dhtml5.sublime-snippet",
+		"/E/games/1/test.html",
+		"/E/games/1/test/test.html",
+		"/E/games/test.html",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/E/RenMeng/abcd.html"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"bookid",
+			"gotoPage",
+			"pageSize",
+			"currentPage",
+			"node",
+			"h3",
+			"bookName",
+			"  \n",
+			",\n",
+			"\">\n",
+			"abcd",
+			"\n    ",
+			"    \n",
+			" \n",
+			"                \n",
+			"grabbing",
+			"                    \n",
+			"    				\n",
+			"		\n",
+			"js",
+			"meta",
+			"\">\n",
+			"href",
+			"=\"\"></",
+			"ctrl",
+			"mynav",
+			"myScrollspy",
+			"myNav",
+			"   \n",
+			"navbar",
+			"sidebar",
+			"nav-sidebar",
+			"dashboard",
+			">",
+			">\n",
+			"	 \n",
+			">\n",
+			"gtm"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "admin/releaseBook.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3545,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								278,
+								278
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 45.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "bookmarket.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 250.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
