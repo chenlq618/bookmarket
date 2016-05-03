@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=9" />
-    <link rel="shortcut icon"href="../images/book.ico">
+    <link rel="shortcut icon" href="../images/book.ico">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/jquery.dataTables.css">
     <script type="text/javascript" src="../js/jquery.min.js"></script>
@@ -23,6 +23,12 @@
     <br>
     <br>
     <br>
+    <div align="center">
+        请输入要删除的用户ID：
+        <input type="text" name="userId" id="userId">
+        <button type="button" class="btn btn-primary" id="delUserbt">删除</button>
+        <br><br>
+    </div>
     <br>
     <table id="example" class="display" cellspacing="0" width="100%" border="1">
         <thead>
@@ -81,6 +87,23 @@ $(document).ready(function() {
         }
     });
 
+
+
+});
+
+
+$("#delUserbt").click(function() {
+    $.ajax({
+        type: "post",
+        data: "userId=" + $("#userId").val(),
+        url: "http://139.129.129.15:80/bookmarket/delUser.json",
+        success: function(data) {
+            alert("删除用户成功，请点击左边的用户管理刷新页面");
+        },
+        error: function() {
+            alert('删除失败');
+        }
+    });
 
 
 });

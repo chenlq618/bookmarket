@@ -139,5 +139,16 @@
 		now()
 		)
 	</insert>	
-	
+	<delete id="delUser" parameterType="Long">
+		delete from userInfo
+		where userId=#{userId}
+	</delete>
+		<delete id="delBook" parameterType="Long">
+		delete from bookInfo
+		where bookId=#{bookId}
+	</delete>
+		<delete id="delBuy" parameterType="Long">
+		delete from buys
+		where buyId=#{buyId}
+	</delete>
 </mapper>

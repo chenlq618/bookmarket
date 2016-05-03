@@ -22,11 +22,17 @@
 <body>
     <br>
     <br>
-    <br>
+    <br><div align="center">
+        请输入要删除的订单ID：
+        <input type="text" name="buyId" id="buyId">
+        <button type="button" class="btn btn-primary" id="delBuybt">删除</button>
+        <br><br>
+    </div>
     <br>
     <table id="example" class="display" cellspacing="0" width="100%" border="1">
         <thead>
             <tr>
+            <th>订单ID</th>
                 <th>购买者姓名</th>
                 <th>书本名称</th>
                 <th>购买者电话</th>
@@ -59,6 +65,8 @@ $(document).ready(function() {
                     }
                 },
                 "columns": [{
+                    "data": "buyId"
+                }, {
                     "data": "name"
                 }, {
                     "data": "bookName"
@@ -75,6 +83,22 @@ $(document).ready(function() {
         }
     });
 
+
+
+});
+
+$("#delBuybt").click(function() {
+    $.ajax({
+        type: "post",
+        data: "buyId=" + $("#buyId").val(),
+        url: "http://139.129.129.15:80/bookmarket/delBuy.json",
+        success: function(data) {
+            alert("删除订单成功，请点击左边的用户管理刷新页面");
+        },
+        error: function() {
+            alert('删除失败');
+        }
+    });
 
 
 });

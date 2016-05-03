@@ -23,6 +23,12 @@
     <br>
     <br>
     <br>
+    <div align="center">
+        请输入要删除的书本ID：
+        <input type="text" name="bookId" id="bookId">
+        <button type="button" class="btn btn-primary" id="delBookbt">删除</button>
+        <br><br>
+    </div>
     <br>
     <table id="example" class="display" cellspacing="0" width="100%" border="1">
         <thead>
@@ -76,6 +82,23 @@ $(document).ready(function() {
         }
     });
 
+
+
+});
+
+
+$("#delBookbt").click(function() {
+    $.ajax({
+        type: "post",
+        data: "bookId=" + $("#bookId").val(),
+        url: "http://139.129.129.15:80/bookmarket/delBook.json",
+        success: function(data) {
+            alert("删除图书成功，请点击左边的用户管理刷新页面");
+        },
+        error: function() {
+            alert('删除失败');
+        }
+    });
 
 
 });

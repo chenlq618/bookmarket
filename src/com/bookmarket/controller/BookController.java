@@ -289,6 +289,32 @@ public class BookController {
 		return result;
 	}
 	
+	
+	@RequestMapping(value = "delUser.json")
+	@ResponseBody
+	public Object delUser(HttpServletRequest request) {
+		Map<String, Object> result = new HashMap<String, Object>();
+		bookDao.delUser(Long.parseLong(request.getParameter("userId")));
+		return result;
+	}
+	
+	
+	@RequestMapping(value = "delBook.json")
+	@ResponseBody
+	public Object delBook(HttpServletRequest request) {
+		Map<String, Object> result = new HashMap<String, Object>();
+		bookDao.delBook(Long.parseLong(request.getParameter("bookId")));
+		return result;
+	}
+	
+	@RequestMapping(value = "delBuy.json")
+	@ResponseBody
+	public Object delBuy(HttpServletRequest request) {
+		Map<String, Object> result = new HashMap<String, Object>();
+		bookDao.delBuy(Long.parseLong(request.getParameter("buyId")));
+		return result;
+	}
+	
 	@RequestMapping(value = "abc.json")
 	public String abc(HttpServletRequest request) {
 		return "test2";

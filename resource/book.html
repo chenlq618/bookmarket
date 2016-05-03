@@ -242,7 +242,7 @@ $("#readBook").click(function() {
 $("#gotoPage").click(function() {
     pageSize = parseInt($("#pageSize").val());
     pageNo = parseInt($("#pageNo").val());
-    if ($.cookie("islogin") == 0 || pageNo==1) {
+    if ($.cookie("islogin") == 0 || $.cookie("islogin") == 1 || pageNo==1) {
         if (pageNo >= pageSize) {
             alert("总共" + pageSize + "章，请重新输入");
         } else {
@@ -284,7 +284,7 @@ $("#after").click(function() {
     if (currentPage >= pageSize) {
         alert("这已经是最后一页了");
     } else {
-        if ($.cookie("islogin") == 0) {
+        if ($.cookie("islogin") == 0 || $.cookie("islogin") == 1) {
             $("#mybody").html("");
             nextPage = currentPage + 1;
             $("#currentPage").val(nextPage);
